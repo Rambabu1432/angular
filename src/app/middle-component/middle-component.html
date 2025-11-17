@@ -1,0 +1,30 @@
+<section class="shoe-section">
+  <h2>Woodland Shoe Collection</h2>
+  <img src="/src/assets/13.jpg" alt="">
+
+  <div class="shoe-grid">
+    <div class="shoe-card" *ngFor="let shoe of shoes">
+   
+      <img [src]="shoe.image" [alt]="shoe.name" class="shoe-img" />
+
+      <div class="shoe-info">
+        <h3>{{ shoe.name }}</h3>
+        <p class="price">₹{{ shoe.price }}</p>
+        <p class="desc">{{ shoe.description }}</p>
+        <p class="desc">{{shoe.second}}</p>
+        <button class="add-btn" >Add to Cart</button>
+        
+      </div>
+    </div>  
+    
+  </div>
+</section>
+
+
+<div>
+  <!-- <button> <a routerLink="filter"></a>Next Page</button> -->
+       <!-- <a routerLink="../filter">Contact</a> -->
+        <button (click)="filtertodirect()" >Filter Page</button>
+
+</div>
+
